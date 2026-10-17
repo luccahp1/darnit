@@ -1,5 +1,6 @@
 """Gittuf plugin implementation for darnit."""
 
+import importlib.metadata
 from pathlib import Path
 
 from darnit_gittuf import handlers
@@ -22,7 +23,7 @@ class GittufImplementation:
 
     @property
     def version(self) -> str:
-        return "0.1.0"
+        return importlib.metadata.version("darnit-gittuf")
 
     @property
     def spec_version(self) -> str:
